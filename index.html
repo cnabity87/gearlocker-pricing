@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing — GearLocker</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'brand': {
+            DEFAULT: '#ee362f',
+            dark: '#c92920',
+            light: '#ffe8e6',
+            50: '#fff5f4',
+          },
+          'warm': {
+            50: '#faf9f6',
+            100: '#f5f3ee',
+            200: '#e8e5dc',
+            300: '#d4d0c4',
+            400: '#a8a396',
+            500: '#8a8577',
+            700: '#55524a',
+            900: '#2a2825',
+          }
+        },
+        fontFamily: {
+          sans: ['Inter', 'system-ui', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+<style>
+  body { font-family: 'Inter', system-ui, sans-serif; }
+  .check { color: #059669; font-weight: 700; font-size: 18px; }
+  .dash { color: #cbd5e0; font-size: 20px; font-weight: 600; }
+  .tab-btn.active { background-color: #ee362f; color: white; }
+  .tab-btn.active:hover { background-color: #c92920; }
+  th, td { vertical-align: middle; }
+</style>
+</head>
+<body class="bg-warm-50 text-gray-900 antialiased">
+
+  <!-- Nav -->
+  <nav class="bg-white border-b border-warm-200 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-2xl font-black tracking-tight">
+        Gear<span style="color: #ee362f">Locker</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#" class="text-gray-700 hover:text-brand text-sm font-semibold">Product</a>
+        <a href="#" class="text-gray-700 hover:text-brand text-sm font-semibold">Customers</a>
+        <a href="#" class="text-brand text-sm font-bold">Pricing</a>
+        <a href="#" class="text-gray-700 hover:text-brand text-sm font-semibold">Sign In</a>
+        <a href="#" class="bg-brand text-white px-5 py-2.5 rounded-lg text-sm font-bold hover:bg-brand-dark transition">Book a Demo</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="max-w-5xl mx-auto px-6 pt-20 pb-10 text-center">
+    <h1 class="text-5xl sm:text-6xl font-black tracking-tight text-gray-900 mb-6 leading-[1.05]">
+      Pricing that fits every program.
+    </h1>
+    <p class="text-xl text-warm-700 max-w-2xl mx-auto leading-relaxed">
+      From a single coach to a full athletic department. Works on any phone — no scanners, no RFID readers, no starter kits.
+    </p>
+  </section>
+
+  <!-- Tab switcher -->
+  <div class="max-w-3xl mx-auto px-6 mb-10">
+    <div class="grid grid-cols-3 gap-2 bg-white rounded-2xl p-2 border border-warm-200 shadow-sm">
+      <button class="tab-btn px-6 py-4 rounded-xl font-bold text-gray-600 hover:bg-warm-100 transition" data-tab="youth">
+        Youth Sports
+      </button>
+      <button class="tab-btn px-6 py-4 rounded-xl font-bold text-gray-600 hover:bg-warm-100 transition" data-tab="schools">
+        Schools
+      </button>
+      <button class="tab-btn px-6 py-4 rounded-xl font-bold text-gray-600 hover:bg-warm-100 transition" data-tab="colleges">
+        Colleges
+      </button>
+    </div>
+  </div>
+
+  <!-- Pricing tables -->
+  <section class="max-w-7xl mx-auto px-6 pb-20">
+
+    <!-- ==================== YOUTH SPORTS ==================== -->
+    <div id="tab-youth" class="tab-panel hidden">
+      <div class="overflow-x-auto">
+        <table class="w-full bg-white rounded-2xl shadow-lg border border-warm-200 min-w-[1000px]">
+          <thead>
+            <tr>
+              <th class="p-6 text-left w-48 align-bottom"></th>
+              <th class="p-6 align-top border-l border-warm-200">
+                <div class="font-black text-2xl text-gray-900">Team</div>
+                <div class="text-sm text-warm-500 mt-2 min-h-[44px]">Single team, single coach</div>
+                <div class="mt-6">
+                  <span class="text-4xl font-black text-gray-900">$750</span>
+                  <span class="text-sm text-warm-500">/year</span>
+                </div>
+                <div class="text-xs text-warm-500 mt-2 min-h-[16px]">No onboarding fee</div>
+                <a href="#" class="mt-5 block w-full bg-white border-2 border-gray-900 text-gray-900 px-4 py-3 rounded-lg text-sm font-bold hover:bg-gray-900 hover:text-white transition text-center">Book a Demo</a>
+              </th>
+              <th class="p-6 align-top border-l border-warm-200 bg-brand-50 relative">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                  <span class="bg-brand text-white px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider whitespace-nowrap shadow-md">Most Popular</span>
+                </div>
+                <div class="font-black text-2xl text-gray-900">League</div>
+                <div class="text-sm text-warm-700 mt-2 min-h-[44px]">League with multiple teams, one admin</div>
+                <div class="mt-6">
+                  <span class="text-4xl font-black text-gray-900">$2,490</span>
+                  <span class="text-sm text-warm-700">/year</span>
+                </div>
+                <div class="text-xs text-warm-700 mt-2 min-h-[16px]">No onboarding fee</div>
+                <a href="#" class="mt-5 block w-full bg-brand text-white px-4 py-3 rounded-lg text-sm font-bold hover:bg-brand-dark transition text-center">Book a Demo</a>
+              </th>
+              <th class="p-6 align-top border-l border-warm-200">
+                <div class="font-black text-2xl text-gray-900">League Pro</div>
+                <div class="text-sm text-warm-500 mt-2 min-h-[44px]">Multi-sport leagues with hundreds of athletes</div>
+                <div class="mt-6">
+                  <span class="text-4xl font-black text-gray-900">$4,990</span>
+                  <span class="text-sm text-warm-500">/year</span>
+                </div>
+                <div class="text-xs text-warm-500 mt-2 min-h-[16px]">No onboarding fee</div>
+                <a href="#" class="mt-5 block w-full bg-white border-2 border-gray-900 text-gray-900 px-4 py-3 rounded-lg text-sm font-bold hover:bg-gray-900 hover:text-white transition text-center">Book a Demo</a>
+              </th>
+              <th class="p-6 align-top border-l border-warm-200">
+                <div class="font-black text-2xl text-gray-900">Enterprise</div>
+                <div class="text-sm text-warm-500 mt-2 min-h-[44px]">Regional and state-level sports orgs</div>
+                <div class="mt-6">
+                  <span class="text-4xl font-black text-gray-900">Custom</span>
+                </div>
+                <div class="text-xs text-warm-500 mt-2 min-h-[16px]">Custom onboarding</div>
+                <a href="#" class="mt-5 block w-full bg-white border-2 border-gray-900 text-gray-900 px-4 py-3 rounded-lg text-sm font-bold hover:bg-gray-900 hover:text-white transition text-center">Contact Sales</a>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="text-sm">
+            <tr class="bg-warm-100"><td colspan="5" class="px-6 py-3 font-black uppercase text-xs tracking-widest text-warm-700">Capacity</td></tr>
+            <tr class="border-t border-warm-200">
+              <td class="px-6 py-4 text-warm-700 font-semibold">Teams</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200">1</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200 bg-brand-50">Up to 15</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200">Up to 40</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200">Unlimited</td>
+            </tr>
+            <tr class="border-t border-warm-200">
+              <td class="px-6 py-4 text-warm-700 font-semibold">Athletes</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200">Up to 100</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200 bg-brand-50">Up to 300</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200">Up to 800</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200">Unlimited</td>
+            </tr>
+
+            <tr class="bg-warm-100"><td colspan="5" class="px-6 py-3 font-black uppercase text-xs tracking-widest text-warm-700">What you get</td></tr>
+            <!-- Feature rows -->
+            <tr class="border-t border-warm-200">
+              <td class="px-6 py-4 text-warm-700">Cloud-based inventory — every item in one place</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+            </tr>
+            <tr class="border-t border-warm-200">
+              <td class="px-6 py-4 text-warm-700">Check-in / check-out on any phone</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+            </tr>
+            <tr class="border-t border-warm-200">
+              <td class="px-6 py-4 text-warm-700">QR code labels for fast scanning <span class="text-warm-500 italic">(sold separately)</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+            </tr>
+            <tr class="border-t border-warm-200">
+              <td class="px-6 py-4 text-warm-700">Automatic parent notifications (issued, returned, missing)</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+            </tr>
+            <tr class="border-t border-warm-200">
+              <td class="px-6 py-4 text-warm-700">Reporting (missing gear, replacements, and more)</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+            </tr>
+            <tr class="border-t border-warm-200">
+              <td class="px-6 py-4 text-warm-700">Budgeting view (expiring gear, repurchase planning)</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+            </tr>
+            <tr class="border-t border-warm-200">
+              <td class="px-6 py-4 text-warm-700">Photos on every item</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+            </tr>
+            <tr class="border-t border-warm-200">
+              <td class="px-6 py-4 text-warm-700">Custom fields (vendors, POs, brands)</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+            </tr>
+            <tr class="border-t border-warm-200">
+              <td class="px-6 py-4 text-warm-700">User permissions (coaches, admins, student managers)</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+            </tr>
+            <tr class="border-t border-warm-200">
+              <td class="px-6 py-4 text-warm-700">Roster sync with TeamSnap, SportsEngine, LeagueApps</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+            </tr>
+
+            <tr class="bg-warm-100"><td colspan="5" class="px-6 py-3 font-black uppercase text-xs tracking-widest text-warm-700">Organization</td></tr>
+            <tr class="border-t border-warm-200">
+              <td class="px-6 py-4 text-warm-700">League-wide dashboard across every team</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="dash">—</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+            </tr>
+            <tr class="border-t border-warm-200">
+              <td class="px-6 py-4 text-warm-700">Unlimited admin seats</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="dash">—</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+            </tr>
+            <tr class="border-t border-warm-200">
+              <td class="px-6 py-4 text-warm-700">Custom integration scope</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="dash">—</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="dash">—</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="dash">—</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+            </tr>
+
+            <tr class="bg-warm-100"><td colspan="5" class="px-6 py-3 font-black uppercase text-xs tracking-widest text-warm-700">Guarantee</td></tr>
+            <tr class="border-t border-warm-200">
+              <td class="px-6 py-4 text-warm-700 font-semibold">GearLocker ROI Guarantee</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ==================== SCHOOLS ==================== -->
+    <div id="tab-schools" class="tab-panel hidden">
+      <div class="overflow-x-auto">
+        <table class="w-full bg-white rounded-2xl shadow-lg border border-warm-200 min-w-[1200px]">
+          <thead>
+            <tr>
+              <th class="p-6 text-left w-44 align-bottom"></th>
+              <th class="p-5 align-top border-l border-warm-200">
+                <div class="font-black text-xl text-gray-900">Micro</div>
+                <div class="text-xs text-warm-500 mt-2 min-h-[48px]">Schools under 250 students</div>
+                <div class="mt-4">
+                  <span class="text-3xl font-black text-gray-900">$1,200</span>
+                  <span class="text-xs text-warm-500">/yr</span>
+                </div>
+                <div class="text-xs text-warm-700 mt-2">+ $1,000 onboarding</div>
+                <div class="text-xs text-warm-500 mt-1">Year 1: $2,200</div>
+                <a href="#" class="mt-4 block w-full bg-white border-2 border-gray-900 text-gray-900 px-3 py-2.5 rounded-lg text-xs font-bold hover:bg-gray-900 hover:text-white transition text-center">Book a Demo</a>
+              </th>
+              <th class="p-5 align-top border-l border-warm-200">
+                <div class="font-black text-xl text-gray-900">Small</div>
+                <div class="text-xs text-warm-500 mt-2 min-h-[48px]">Most community and parochial high schools</div>
+                <div class="mt-4">
+                  <span class="text-3xl font-black text-gray-900">$1,800</span>
+                  <span class="text-xs text-warm-500">/yr</span>
+                </div>
+                <div class="text-xs text-warm-700 mt-2">+ $1,000 onboarding</div>
+                <div class="text-xs text-warm-500 mt-1">Year 1: $2,800</div>
+                <a href="#" class="mt-4 block w-full bg-white border-2 border-gray-900 text-gray-900 px-3 py-2.5 rounded-lg text-xs font-bold hover:bg-gray-900 hover:text-white transition text-center">Book a Demo</a>
+              </th>
+              <th class="p-5 align-top border-l border-warm-200 bg-brand-50 relative">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                  <span class="bg-brand text-white px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider whitespace-nowrap shadow-md">Most Popular</span>
+                </div>
+                <div class="font-black text-xl text-gray-900">Medium</div>
+                <div class="text-xs text-warm-700 mt-2 min-h-[48px]">Typical suburban high schools</div>
+                <div class="mt-4">
+                  <span class="text-3xl font-black text-gray-900">$2,600</span>
+                  <span class="text-xs text-warm-700">/yr</span>
+                </div>
+                <div class="text-xs text-warm-700 mt-2">+ $1,000 onboarding</div>
+                <div class="text-xs text-warm-700 mt-1">Year 1: $3,600</div>
+                <a href="#" class="mt-4 block w-full bg-brand text-white px-3 py-2.5 rounded-lg text-xs font-bold hover:bg-brand-dark transition text-center">Book a Demo</a>
+              </th>
+              <th class="p-5 align-top border-l border-warm-200">
+                <div class="font-black text-xl text-gray-900">Large</div>
+                <div class="text-xs text-warm-500 mt-2 min-h-[48px]">Large high schools with 20+ programs</div>
+                <div class="mt-4">
+                  <span class="text-3xl font-black text-gray-900">$3,600</span>
+                  <span class="text-xs text-warm-500">/yr</span>
+                </div>
+                <div class="text-xs text-warm-700 mt-2">+ $1,500 onboarding</div>
+                <div class="text-xs text-warm-500 mt-1">Year 1: $5,100</div>
+                <a href="#" class="mt-4 block w-full bg-white border-2 border-gray-900 text-gray-900 px-3 py-2.5 rounded-lg text-xs font-bold hover:bg-gray-900 hover:text-white transition text-center">Book a Demo</a>
+              </th>
+              <th class="p-5 align-top border-l border-warm-200">
+                <div class="font-black text-xl text-gray-900">District</div>
+                <div class="text-xs text-warm-500 mt-2 min-h-[48px]">Districts running multiple schools</div>
+                <div class="mt-4">
+                  <span class="text-3xl font-black text-gray-900">Custom</span>
+                </div>
+                <div class="text-xs text-warm-700 mt-2">Custom onboarding</div>
+                <div class="text-xs text-warm-500 mt-1">&nbsp;</div>
+                <a href="#" class="mt-4 block w-full bg-white border-2 border-gray-900 text-gray-900 px-3 py-2.5 rounded-lg text-xs font-bold hover:bg-gray-900 hover:text-white transition text-center">Contact Sales</a>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="text-sm">
+            <tr class="bg-warm-100"><td colspan="6" class="px-6 py-3 font-black uppercase text-xs tracking-widest text-warm-700">School size</td></tr>
+            <tr class="border-t border-warm-200">
+              <td class="px-6 py-4 text-warm-700 font-semibold">Enrollment</td>
+              <td class="px-4 py-4 text-center border-l border-warm-200">&lt;250</td>
+              <td class="px-4 py-4 text-center border-l border-warm-200">250–750</td>
+              <td class="px-4 py-4 text-center border-l border-warm-200 bg-brand-50">750–2,000</td>
+              <td class="px-4 py-4 text-center border-l border-warm-200">2,000+</td>
+              <td class="px-4 py-4 text-center border-l border-warm-200">Any</td>
+            </tr>
+
+            <tr class="bg-warm-100"><td colspan="6" class="px-6 py-3 font-black uppercase text-xs tracking-widest text-warm-700">What you get</td></tr>
+            <tr class="border-t border-warm-200"><td class="px-6 py-4 text-warm-700">Cloud-based inventory — every item in one place</td>
+              <td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td></tr>
+            <tr class="border-t border-warm-200"><td class="px-6 py-4 text-warm-700">Check-in / check-out on any phone</td>
+              <td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td></tr>
+            <tr class="border-t border-warm-200"><td class="px-6 py-4 text-warm-700">QR code labels for fast scanning <span class="text-warm-500 italic">(sold separately)</span></td>
+              <td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td></tr>
+            <tr class="border-t border-warm-200"><td class="px-6 py-4 text-warm-700">Automatic parent notifications (issued, returned, missing)</td>
+              <td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td></tr>
+            <tr class="border-t border-warm-200"><td class="px-6 py-4 text-warm-700">Reporting (missing gear, replacements, and more)</td>
+              <td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td></tr>
+            <tr class="border-t border-warm-200"><td class="px-6 py-4 text-warm-700">Budgeting view (expiring gear, repurchase planning)</td>
+              <td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td></tr>
+            <tr class="border-t border-warm-200"><td class="px-6 py-4 text-warm-700">Photos on every item</td>
+              <td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td></tr>
+            <tr class="border-t border-warm-200"><td class="px-6 py-4 text-warm-700">Custom fields (vendors, POs, brands)</td>
+              <td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td></tr>
+            <tr class="border-t border-warm-200"><td class="px-6 py-4 text-warm-700">User permissions (coaches, admins, student managers)</td>
+              <td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td></tr>
+
+            <tr class="bg-warm-100"><td colspan="6" class="px-6 py-3 font-black uppercase text-xs tracking-widest text-warm-700">Organization</td></tr>
+            <tr class="border-t border-warm-200"><td class="px-6 py-4 text-warm-700">School-wide dashboard across every program</td>
+              <td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td></tr>
+            <tr class="border-t border-warm-200"><td class="px-6 py-4 text-warm-700">Unlimited admin seats</td>
+              <td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td></tr>
+            <tr class="border-t border-warm-200"><td class="px-6 py-4 text-warm-700">District-wide dashboard across every school</td>
+              <td class="px-4 py-4 text-center border-l border-warm-200"><span class="dash">—</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="dash">—</span></td><td class="px-4 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="dash">—</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="dash">—</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td></tr>
+
+            <tr class="bg-warm-100"><td colspan="6" class="px-6 py-3 font-black uppercase text-xs tracking-widest text-warm-700">Guarantee</td></tr>
+            <tr class="border-t border-warm-200"><td class="px-6 py-4 text-warm-700 font-semibold">GearLocker ROI Guarantee</td>
+              <td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-4 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Schools add-ons -->
+      <div class="mt-8 bg-white rounded-2xl border border-warm-200 p-8">
+        <div class="font-black uppercase text-xs tracking-widest text-warm-700 mb-4">Optional add-ons</div>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-brand-light rounded-lg flex items-center justify-center flex-shrink-0">
+              <span class="text-brand font-black">+</span>
+            </div>
+            <div>
+              <div class="font-bold text-gray-900">SIS Integration</div>
+              <div class="text-sm text-warm-700 mt-1">Sync with PowerSchool, Skyward, Infinite Campus, or Clever.</div>
+              <div class="text-sm font-bold text-gray-900 mt-1">+$500 / year</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-brand-light rounded-lg flex items-center justify-center flex-shrink-0">
+              <span class="text-brand font-black">+</span>
+            </div>
+            <div>
+              <div class="font-bold text-gray-900">QR Code Labels</div>
+              <div class="text-sm text-warm-700 mt-1">Stick-on or heat-press labels for fast phone scanning.</div>
+              <div class="text-sm font-bold text-gray-900 mt-1">Sold separately</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== COLLEGES ==================== -->
+    <div id="tab-colleges" class="tab-panel hidden">
+      <div class="overflow-x-auto">
+        <table class="w-full bg-white rounded-2xl shadow-lg border border-warm-200 min-w-[1000px]">
+          <thead>
+            <tr>
+              <th class="p-6 text-left w-48 align-bottom"></th>
+              <th class="p-6 align-top border-l border-warm-200">
+                <div class="font-black text-2xl text-gray-900">Single Sport</div>
+                <div class="text-sm text-warm-500 mt-2 min-h-[44px]">One program, one equipment manager</div>
+                <div class="mt-6">
+                  <span class="text-4xl font-black text-gray-900">$1,990</span>
+                  <span class="text-sm text-warm-500">/year</span>
+                </div>
+                <div class="text-xs text-warm-700 mt-2">+ $1,500 onboarding</div>
+                <div class="text-xs text-warm-500 mt-1">Year 1: $3,490</div>
+                <a href="#" class="mt-5 block w-full bg-white border-2 border-gray-900 text-gray-900 px-4 py-3 rounded-lg text-sm font-bold hover:bg-gray-900 hover:text-white transition text-center">Book a Demo</a>
+              </th>
+              <th class="p-6 align-top border-l border-warm-200 bg-brand-50 relative">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                  <span class="bg-brand text-white px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider whitespace-nowrap shadow-md">Most Popular</span>
+                </div>
+                <div class="font-black text-2xl text-gray-900">Small College</div>
+                <div class="text-sm text-warm-700 mt-2 min-h-[44px]">JUCO, NAIA, small D-III — AD does it all</div>
+                <div class="mt-6">
+                  <span class="text-4xl font-black text-gray-900">$3,990</span>
+                  <span class="text-sm text-warm-700">/year</span>
+                </div>
+                <div class="text-xs text-warm-700 mt-2">+ $2,500 onboarding</div>
+                <div class="text-xs text-warm-700 mt-1">Year 1: $6,490</div>
+                <a href="#" class="mt-5 block w-full bg-brand text-white px-4 py-3 rounded-lg text-sm font-bold hover:bg-brand-dark transition text-center">Book a Demo</a>
+              </th>
+              <th class="p-6 align-top border-l border-warm-200">
+                <div class="font-black text-2xl text-gray-900">Athletic Dept.</div>
+                <div class="text-sm text-warm-500 mt-2 min-h-[44px]">Full D-III, mid D-II, large NAIA</div>
+                <div class="mt-6">
+                  <span class="text-4xl font-black text-gray-900">$6,990</span>
+                  <span class="text-sm text-warm-500">/year</span>
+                </div>
+                <div class="text-xs text-warm-700 mt-2">+ $5,000 onboarding</div>
+                <div class="text-xs text-warm-500 mt-1">Year 1: $11,990</div>
+                <a href="#" class="mt-5 block w-full bg-white border-2 border-gray-900 text-gray-900 px-4 py-3 rounded-lg text-sm font-bold hover:bg-gray-900 hover:text-white transition text-center">Book a Demo</a>
+              </th>
+              <th class="p-6 align-top border-l border-warm-200">
+                <div class="font-black text-2xl text-gray-900">Power / Enterprise</div>
+                <div class="text-sm text-warm-500 mt-2 min-h-[44px]">D-I, P4, multi-venue athletic departments</div>
+                <div class="mt-6">
+                  <span class="text-4xl font-black text-gray-900">Custom</span>
+                </div>
+                <div class="text-xs text-warm-700 mt-2">Starts at $12,990/yr</div>
+                <div class="text-xs text-warm-500 mt-1">+ $10,000 onboarding</div>
+                <a href="#" class="mt-5 block w-full bg-white border-2 border-gray-900 text-gray-900 px-4 py-3 rounded-lg text-sm font-bold hover:bg-gray-900 hover:text-white transition text-center">Contact Sales</a>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="text-sm">
+            <tr class="bg-warm-100"><td colspan="5" class="px-6 py-3 font-black uppercase text-xs tracking-widest text-warm-700">Scope</td></tr>
+            <tr class="border-t border-warm-200">
+              <td class="px-6 py-4 text-warm-700 font-semibold">Sports</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200">1</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200 bg-brand-50">Up to 12</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200">13–25</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200">26+</td>
+            </tr>
+
+            <tr class="bg-warm-100"><td colspan="5" class="px-6 py-3 font-black uppercase text-xs tracking-widest text-warm-700">What you get</td></tr>
+            <tr class="border-t border-warm-200"><td class="px-6 py-4 text-warm-700">Cloud-based inventory — every item in one place</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td></tr>
+            <tr class="border-t border-warm-200"><td class="px-6 py-4 text-warm-700">Check-in / check-out on any phone</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td></tr>
+            <tr class="border-t border-warm-200"><td class="px-6 py-4 text-warm-700">QR code labels for fast scanning <span class="text-warm-500 italic">(sold separately)</span></td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td></tr>
+            <tr class="border-t border-warm-200"><td class="px-6 py-4 text-warm-700">Automatic athlete notifications (issued, returned, missing)</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td></tr>
+            <tr class="border-t border-warm-200"><td class="px-6 py-4 text-warm-700">Reporting (missing gear, replacements, and more)</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td></tr>
+            <tr class="border-t border-warm-200"><td class="px-6 py-4 text-warm-700">Budgeting view (expiring gear, repurchase planning)</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td></tr>
+            <tr class="border-t border-warm-200"><td class="px-6 py-4 text-warm-700">Photos on every item</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td></tr>
+            <tr class="border-t border-warm-200"><td class="px-6 py-4 text-warm-700">Custom fields (vendors, POs, brands)</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td></tr>
+            <tr class="border-t border-warm-200"><td class="px-6 py-4 text-warm-700">User permissions (coaches, admins, student managers)</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td></tr>
+
+            <tr class="bg-warm-100"><td colspan="5" class="px-6 py-3 font-black uppercase text-xs tracking-widest text-warm-700">Organization</td></tr>
+            <tr class="border-t border-warm-200"><td class="px-6 py-4 text-warm-700">Department-wide dashboard across every sport</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="dash">—</span></td><td class="px-6 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td></tr>
+            <tr class="border-t border-warm-200"><td class="px-6 py-4 text-warm-700">Unlimited admin seats</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td></tr>
+            <tr class="border-t border-warm-200"><td class="px-6 py-4 text-warm-700">Custom integrations (Teamworks, ARMS, compliance)</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="dash">—</span></td><td class="px-6 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="dash">—</span></td><td class="px-6 py-4 text-center border-l border-warm-200"><span class="dash">—</span></td><td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td></tr>
+
+            <tr class="bg-warm-100"><td colspan="5" class="px-6 py-3 font-black uppercase text-xs tracking-widest text-warm-700">Guarantee</td></tr>
+            <tr class="border-t border-warm-200"><td class="px-6 py-4 text-warm-700 font-semibold">GearLocker ROI Guarantee</td>
+              <td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200 bg-brand-50"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td><td class="px-6 py-4 text-center border-l border-warm-200"><span class="check">✓</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Colleges add-ons -->
+      <div class="mt-8 bg-white rounded-2xl border border-warm-200 p-8">
+        <div class="font-black uppercase text-xs tracking-widest text-warm-700 mb-4">Optional add-ons</div>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-brand-light rounded-lg flex items-center justify-center flex-shrink-0">
+              <span class="text-brand font-black">+</span>
+            </div>
+            <div>
+              <div class="font-bold text-gray-900">QR Code Labels</div>
+              <div class="text-sm text-warm-700 mt-1">Stick-on or heat-press labels for fast phone scanning.</div>
+              <div class="text-sm font-bold text-gray-900 mt-1">Sold separately</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Why GearLocker strip -->
+  <section class="bg-white border-y border-warm-200 py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-10">
+        <div>
+          <div class="text-3xl mb-4">📱</div>
+          <div class="font-black text-lg text-gray-900 mb-2">Works on any phone.</div>
+          <div class="text-sm text-warm-700 leading-relaxed">No scanners, RFID readers, or starter kits to buy. Open the app and get to work.</div>
+        </div>
+        <div>
+          <div class="text-3xl mb-4">🏟️</div>
+          <div class="font-black text-lg text-gray-900 mb-2">Every program, one system.</div>
+          <div class="text-sm text-warm-700 leading-relaxed">Full visibility for ADs, league admins, and coaches. No more chasing spreadsheets from every team.</div>
+        </div>
+        <div>
+          <div class="text-3xl mb-4">🏗️</div>
+          <div class="font-black text-lg text-gray-900 mb-2">Built by a coach.</div>
+          <div class="text-sm text-warm-700 leading-relaxed">Keenan McCurdy built GearLocker while running athletics at Lincoln East High School.</div>
+        </div>
+        <div>
+          <div class="text-3xl mb-4">🛡️</div>
+          <div class="font-black text-lg text-gray-900 mb-2">Backed by the ROI Guarantee.</div>
+          <div class="text-sm text-warm-700 leading-relaxed">If we don't save you more than we cost in year one, we refund the difference.</div>
+        </div>
+      </div>
+      <div class="mt-10 text-center text-sm text-warm-500">
+        Every customer gets support from the GearLocker team.
+      </div>
+    </div>
+  </section>
+
+  <!-- Guarantee callout -->
+  <section class="py-20 px-6">
+    <div class="max-w-4xl mx-auto bg-gray-900 text-white rounded-3xl p-12 sm:p-16 text-center shadow-2xl relative overflow-hidden">
+      <div class="absolute top-0 right-0 w-64 h-64 bg-brand opacity-20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+      <div class="relative">
+        <div class="inline-block bg-white/10 backdrop-blur rounded-full px-4 py-1.5 text-xs font-black uppercase tracking-widest mb-6">The GearLocker ROI Guarantee</div>
+        <h2 class="text-4xl sm:text-5xl font-black mb-4 leading-tight">
+          Save more than we cost.<br>
+          <span style="color: #ee362f">Or we refund the difference.</span>
+        </h2>
+        <p class="text-lg text-white/80 max-w-2xl mx-auto leading-relaxed">
+          If the value of gear GearLocker helps you recover in your first 12 months is less than what you pay in subscription, we refund the difference. Written into every contract we sign.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="py-20 px-6 text-center">
+    <h2 class="text-4xl sm:text-5xl font-black tracking-tight mb-4">See it for your program.</h2>
+    <p class="text-lg text-warm-700 mb-8 max-w-xl mx-auto">A 30-minute demo is usually all it takes.</p>
+    <a href="#" class="inline-block bg-brand text-white px-10 py-4 rounded-lg text-lg font-bold hover:bg-brand-dark transition shadow-lg">Book a Demo</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-warm-400 py-12">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="text-white font-black text-xl">
+        Gear<span style="color: #ee362f">Locker</span>
+      </div>
+      <div class="text-sm text-warm-500">The All-In-One Sports Equipment Inventory & Management Software. Built in Lincoln, NE.</div>
+    </div>
+  </footer>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab-btn');
+    const panels = document.querySelectorAll('.tab-panel');
+    function activate(name) {
+      tabs.forEach(t => t.classList.remove('active'));
+      panels.forEach(p => p.classList.add('hidden'));
+      document.querySelector('[data-tab="' + name + '"]').classList.add('active');
+      document.getElementById('tab-' + name).classList.remove('hidden');
+      window.scrollTo({ top: window.scrollY, behavior: 'instant' });
+    }
+    tabs.forEach(tab => tab.addEventListener('click', () => activate(tab.dataset.tab)));
+    // Default: Schools tab (your largest buyer category in the pilot)
+    activate('schools');
+  </script>
+</body>
+</html>
